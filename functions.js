@@ -2,7 +2,16 @@
 
 const functions = {
     add: (num1, num2) => num1 + num2,
-    isNull: () => null
+    isNull: () => null,
+    checkValue: (x) => x,
+    createUser: () => {
+        const user =
+        {
+            firstName: 'Luke',
+            lastName: 'Skywalker'
+        }
+        return user;
+    }
 }
 
 module.exports = functions;

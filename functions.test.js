@@ -22,3 +22,21 @@ test('Adds 2 + 2 to NOT equal 5', () => {
 test('Determines if output is null', () => {
     expect(functions.isNull()).toBeNull();
 });
+
+test('Determines if output is falsy', () => {
+    expect(functions.checkValue(null)).toBeFalsy();
+});
+
+test('Determines if output is falsy', () => {
+    expect(functions.checkValue(undefined)).toBeFalsy();
+});
+
+test('Determines if output is falsy', () => {
+    expect(functions.checkValue(0)).toBeFalsy();
+});
+
+//.toBe() vs. .toEqual()
+test('Creates user object for Luke Skywalker', () => {
+    //Pass in the object with ".toEqual", which is used instead of ".toBe" when passing in arrays or objects.
+    expect(functions.createUser()).toEqual({ firstName: 'Luke', lastName: 'Skywalker' });
+});
